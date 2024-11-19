@@ -16,7 +16,11 @@ const getElement = (selection) => {
 
 const formatPrice = () => {};
 
-const getStorageItem = () => {};
-const setStorageItem = () => {};
+const getStorageItem = (item) => {
+	let storageItem = localStorage.getItem(item);
+	storageItem ? (storageItem = JSON.parse(localStorage.getItem(item))) : (storageItem = []);
+	return storageItem;
+};
+const setStorageItem = (name, item) => localStorage.setItem(name, JSON.stringify(item));
 
 export { allProductsUrl, singleProductUrl, getElement, formatPrice, getStorageItem, setStorageItem };
