@@ -20,7 +20,7 @@ const display = (products, element) => {
 			</article>`;
 		})
 		.join('');
-	element.addEventListener('click', function (e) {
+	element.addEventListener('click', (e) => {
 		const parent = e.target.parentElement;
 		if (parent.classList.contains('product-cart-btn')) addToCart(parent.dataset.id);
 	});
