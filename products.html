@@ -85,7 +85,24 @@
 
 		<!-- Products:  -->
 		<section class="products">
-			<div class="filters"></div>
+			<div class="filters">
+				<div class="filters-container">
+					<form action="" class="input-form">
+						<input type="text" placeholder="search..." name="" id="" class="search-input" />
+					</form>
+					<!-- filter by category (buttons will be dynamic)-->
+					<h4>Company</h4>
+					<article class="companies">
+						<button class="company-btn">Ikea</button>
+						<button class="company-btn">all</button>
+					</article>
+					<!-- filter by price (min, value and max will be dynamic)-->
+					<form action="" class="price-form">
+						<input type="range" name="" id="" class="price-filter" min="0" value="50" max="100" />
+					</form>
+				</div>
+			</div>
+
 			<div class="products-container"><!--  --></div>
 		</section>
 		<div class="page-loading">

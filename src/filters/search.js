@@ -1,5 +1,17 @@
 import { getElement } from '../utils.js';
 import display from '../displayProducts.js';
-const setupSearch = () => {};
+
+const setupSearch = (store) => {
+	const form = getElement('.input-form');
+	const nameInput = getElement('.search-input');
+	form.addEventListener('keyup', () => {
+		const value = nameInput.value;
+		if (value) {
+			console.log(value);
+		} else {
+			display(store, getElement('.products-container'));
+		}
+	});
+};
 
 export default setupSearch;
