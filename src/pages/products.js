@@ -14,6 +14,8 @@ import display from '../displayProducts.js';
 import { getElement } from '../utils.js';
 
 const loading = getElement('.page-loading');
+const nameInput = getElement('.search-input');
+nameInput.value = ''; // fixes Firefox
 display(store, getElement('.products-container'));
 setupSearch(store);
 loading.style.display = 'none';
