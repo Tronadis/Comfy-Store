@@ -18,7 +18,7 @@ const setupPrice = (store) => {
 		nameInput.value = ''; // deletes remanant search input
 
 		const value = parseInt(priceInput.value);
-		priceValue.textContent = `Value: $${value}`;
+		priceValue.textContent = `maximum: $${value}`;
 		let newStore = store.filter((product) => product.price / 100 <= value);
 		display(newStore, getElement('.products-container'));
 		if (newStore.length < 1) {
