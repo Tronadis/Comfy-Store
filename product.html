@@ -52,7 +52,36 @@
 			</aside>
 		</div>
 		<!-- Cart (will be dynamic) -->
-
+		<div class="cart-overlay">
+			<aside class="cart">
+				<button class="cart-close"><i class="fas fa-times"></i></button>
+				<header>
+					<h3 class="text-slanted">your bag</h3>
+				</header>
+				<div class="cart-items">
+					<article class="cart-item" data-id="">
+						<img src="./images/main-bcg.png" alt="prod name" class="cart-item-img" />
+						<div>
+							<!-- item info -->
+							<h4 class="cart-item-name">high-back-bench</h4>
+							<p class="cart-item-price">$12.99</p>
+							<button class="cart-item-remove-btn">remove</button>
+						</div>
+						<div>
+							<!-- amount toggle -->
+							<button class="cart-item-increase"><i class="fas fa-chevron-up"></i></button>
+							<p class="cart-item-amount">1</p>
+							<button class="cart-item-decrease"><i class="fas fa-chevron-down"></i></button>
+						</div>
+					</article>
+				</div>
+				<footer>
+					<h3 class="cart-total text-slanted">total: $12.99</h3>
+					<button class="cart-checkout btn">checkout</button>
+				</footer>
+			</aside>
+		</div>
+		<!-- /cart -->
 		<!-- Product info: -->
 		<section class="single-product">
 			<div class="section-center single-product-center">
@@ -67,7 +96,7 @@
 							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam nulla veritatis laudantium deserunt ea, sed
 							dolore expedita maiores eum necessitatibus?
 						</p>
-						<button class="addToCartBtn btn">add to cart</button>
+						<button class="addToCartBtn btn" data-id="id">add to cart</button>
 					</div>
 				</article>
 			</div>
