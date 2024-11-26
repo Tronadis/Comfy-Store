@@ -5,7 +5,7 @@ const setupSearch = (store) => {
 	const form = getElement('.input-form');
 	const nameInput = getElement('.search-input');
 	form.addEventListener('keyup', () => {
-		const value = nameInput.value;
+		const value = nameInput.value.toLowerCase();
 		if (value) {
 			const matchingByName = store.filter((product) => {
 				let { name } = product;
