@@ -22,9 +22,27 @@ export const addToCart = (id) => {
 	} else {
 		// update values
 	}
+	// add 1 to the count
+	displayCartItemCount();
+	// display the total
+	displayCartTotal();
+	// set the cart in localStorage
+	setStorageItem('cart', cart);
 	// more to do here
 	openCart();
 };
+function displayCartItemCount() {
+	const amount = cart.reduce((total, cartItem) => {
+		return (total += cartItem.amount);
+	}, 0);
+	cartItemCountDOM.textContent = amount;
+}
+function displayCartTotal() {
+	let total = cart.reduce((total, cartItem) => {
+		return (total += cartItem.price * cartItem.amount);
+	}, 0);
+	cartTotalDOM.textContent = `Total: ${formatPrice(total)}`;
+}
 
 const init = () => {
 	console.log(cart); //TEMP
