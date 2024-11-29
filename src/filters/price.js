@@ -20,7 +20,7 @@ const setupPrice = (store) => {
 		const value = parseInt(priceInput.value);
 		priceValue.textContent = `maximum: $${value}`;
 		let newStore = store.filter((product) => product.price / 100 <= value);
-		display(newStore, getElement('.products-container'));
+		display(newStore, getElement('.products-container'), true);
 		if (newStore.length < 1) {
 			const products = getElement('.products-container');
 			products.innerHTML = `<h3 class="filter-error">Sorry, no product matched your search</h3>`;

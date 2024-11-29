@@ -13,7 +13,7 @@ const setupCompanies = (store) => {
 				? (newStore = [...store])
 				: (newStore = store.filter((product) => product.company === e.target.textContent));
 
-			display(newStore, getElement('.products-container'));
+			display(newStore, getElement('.products-container'), true);
 		}
 	});
 };

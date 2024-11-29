@@ -12,14 +12,14 @@ const setupSearch = (store) => {
 				name = name.toLowerCase();
 				if (name.startsWith(value)) return product;
 			});
-			display(matchingByName, getElement('.products-container'));
+			display(matchingByName, getElement('.products-container'), true);
 			if (matchingByName.length < 1) {
 				const products = getElement('.products-container');
 				products.innerHTML = /*html*/ `
                     <h3>Sorry, we do not have this right now.</h3>`;
 			}
 		}
-		if (!value) display(store, getElement('.products-container'));
+		if (!value) display(store, getElement('.products-container'), true);
 	});
 };
 
